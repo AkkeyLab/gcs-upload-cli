@@ -6,7 +6,7 @@ DIR_PATH="$(pwd $1)"
 # sample: example.com/assets
 GS_PATH=$2
 
-DIRS=`find $DIR_PATH -type d`
+DIRS=`find $DIR_PATH -type d -name .git -prune -o -type d -print`
 
 for DIR in $DIRS;
 do
